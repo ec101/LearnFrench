@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Learn French</string>
+    <string name="edit_message">Question</string>
+    <string name="button_send">Submit</string>
+    <string name="edit_answer">Answer</string>
+    <string name="edit_expected">Expected Answer</string>
+    <string name="button_next">Next</string>
+</resources>
