@@ -1,5 +1,8 @@
 package ec101.learnfrench;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * Created by Emmet on 05/04/2017.
  */
@@ -14,6 +17,11 @@ public class DefaultAnsweredQuestion implements AnsweredQuestion {
         //TODO - check inputs
         this.question = question;
         this.answer = answer;
+    }
+
+    private DefaultAnsweredQuestion(Parcel in){
+        this.question = in.readParcelable(DefaultWordQuestion.class.getClassLoader());
+        this.answer = in.readParcelable(DefaultAnswer.class.getClassLoader());
     }
 
     @Override
@@ -32,4 +40,26 @@ public class DefaultAnsweredQuestion implements AnsweredQuestion {
         String providedAnswer = this.answer.getAnswer().toLowerCase().trim();
         return expectedAnswer.equals(providedAnswer);
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeParcelable(this.question, flags);
+        dest.writeParcelable(this.answer, flags);
+    }
+
+    public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {
+
+        public DefaultAnsweredQuestion createFromParcel(Parcel in) {
+            return new DefaultAnsweredQuestion(in);
+        }
+
+        public DefaultAnsweredQuestion[] newArray(int size) {
+            return new DefaultAnsweredQuestion[size];
+        }
+    };
 }

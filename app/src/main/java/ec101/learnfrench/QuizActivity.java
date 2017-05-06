@@ -1,5 +1,6 @@
 package ec101.learnfrench;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -7,17 +8,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Scanner;
 import java.util.Set;
 
-public class FrenchWordsQAndA extends AppCompatActivity {
+public class QuizActivity extends AppCompatActivity {
+
+    public static final String QUIZ_RESULTS = "ec101.learnfrench.quizResults";
 
     private Quiz quiz;
     private TextView questionField;
@@ -27,7 +24,7 @@ public class FrenchWordsQAndA extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_french_words_qand);
+        setContentView(R.layout.activity_quiz);
 
         Set<Learnable> allLearnableItems = newLearnableItems();
 
@@ -39,8 +36,8 @@ public class FrenchWordsQAndA extends AppCompatActivity {
             public void onClick(View v) {
                 saveAnswer();
                 if(quiz.isFinished()){
-                    displayResults();
                     nextButton.setEnabled(false);
+                    finishQuiz();
                 }else {
                     displayNextQuestion();
                     if(quiz.isFinished()){
@@ -59,11 +56,10 @@ public class FrenchWordsQAndA extends AppCompatActivity {
         displayNextQuestion();
     }
 
-    private void displayResults() {
-        QuestionsResults quizResults = this.quiz.getQuizResults();
-        String generatedReport = generateResultsReport(quizResults);
-        questionField.setText(generatedReport, TextView.BufferType.NORMAL);
-        answerField.setText("", TextView.BufferType.NORMAL);
+    private void finishQuiz(){
+        Intent intent = new Intent(this, ResultsActivity.class);
+        intent.putExtra(QUIZ_RESULTS, quiz.getQuizResults());
+        startActivity(intent);
     }
 
     private void displayNextQuestion() {
@@ -79,25 +75,6 @@ public class FrenchWordsQAndA extends AppCompatActivity {
 
     private AnsweredQuestion createAnsweredQuestion(Question question, Answer answer) {
         return new DefaultAnsweredQuestion(question, answer);
-    }
-
-    private String generateResultsReport(QuestionsResults questionResults) {
-        //TODO - improve output
-        final List<AnsweredQuestion> correctlyAnsweredQuestions = questionResults.getCorrectlyAnsweredQuestions();
-        final List<AnsweredQuestion> incorrectlyAnsweredQuestions = questionResults.getIncorrectlyAnsweredQuestions();
-        int total = correctlyAnsweredQuestions.size() + incorrectlyAnsweredQuestions.size();
-        StringBuilder builder = new StringBuilder();
-        builder.append("Total "+total+" Correct "+correctlyAnsweredQuestions.size()+" Incorrect "+incorrectlyAnsweredQuestions.size()+"\n");
-
-        for(AnsweredQuestion answeredQuestion : incorrectlyAnsweredQuestions){
-            builder.append("Expected: "+answeredQuestion.getQuestion().getExpectedAnswer().getAnswer()+ " Submitted: "+answeredQuestion.getAnswer().getAnswer()+"\n");
-        }
-
-        for(AnsweredQuestion answeredQuestion : correctlyAnsweredQuestions){
-            builder.append("Expected: "+answeredQuestion.getQuestion().getExpectedAnswer().getAnswer()+ " Submitted: "+answeredQuestion.getAnswer().getAnswer()+"\n");
-        }
-
-        return builder.toString();
     }
 
     private Set<Learnable> newLearnableItems() {
