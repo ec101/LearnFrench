@@ -28,6 +28,8 @@ public class DefaultAnsweredQuestion implements AnsweredQuestion {
 
     @Override
     public boolean isAnswerCorrect() {
-        return this.question.getExpectedAnswer().equals(this.answer.getAnswer());
+        String expectedAnswer = this.question.getExpectedAnswer().getAnswer().toLowerCase().trim();
+        String providedAnswer = this.answer.getAnswer().toLowerCase().trim();
+        return expectedAnswer.equals(providedAnswer);
     }
 }

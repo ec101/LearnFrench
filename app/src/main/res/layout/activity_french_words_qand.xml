@@ -6,50 +6,53 @@
     android:layout_height="match_parent"
     tools:context="ec101.learnfrench.FrenchWordsQAndA">
 
+    <TextView
+        android:id="@+id/editText2"
+        android:layout_width="391dp"
+        android:layout_height="384dp"
+        android:layout_marginBottom="112dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:text="@string/edit_message"
+        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/edit_answer"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="36dp"
         android:text="@string/button_next"
+        android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4"
-        android:layout_marginStart="16dp" />
-
-    <EditText
-        android:id="@+id/editText3"
-        android:layout_width="0dp"
-        android:layout_height="140dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="@string/edit_message"
-        android:inputType="textPersonName"
-        android:text="Question"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editText4"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="22dp"
-        android:ems="10"
-        android:hint="@string/edit_answer"
-        android:inputType="textPersonName"
-        android:text="Answer"
-        app:layout_constraintHorizontal_bias="0.988"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
-
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="107dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 </android.support.constraint.ConstraintLayout>

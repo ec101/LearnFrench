@@ -16,6 +16,6 @@ public interface Quiz {
 
     QuestionsResults getQuizResults();
 
-    boolean isFinalQuestion();
+    boolean isFinished();
 
 }

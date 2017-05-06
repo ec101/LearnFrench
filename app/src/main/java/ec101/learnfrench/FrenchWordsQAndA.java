@@ -20,7 +20,7 @@ import java.util.Set;
 public class FrenchWordsQAndA extends AppCompatActivity {
 
     private Quiz quiz;
-    private EditText questionField;
+    private TextView questionField;
     private EditText answerField;
     private Button nextButton;
 
@@ -31,65 +31,80 @@ public class FrenchWordsQAndA extends AppCompatActivity {
 
         Set<Learnable> allLearnableItems = newLearnableItems();
 
-        final Quiz quiz = new DefaultQuiz(allLearnableItems);
+        this.quiz = new DefaultQuiz(allLearnableItems);
 
-        nextButton = (Button)findViewById(R.id.button5);
+        nextButton = (Button)findViewById(R.id.button);
         View.OnClickListener next_listener = new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 saveAnswer();
-                displayNextQuestion();
-                if(quiz.isFinalQuestion()){
-                    nextButton.setText("Finish");
+                if(quiz.isFinished()){
+                    displayResults();
+                }else {
+                    displayNextQuestion();
+                    if(quiz.isFinished()){
+                        nextButton.setText("Finished");
+                    }
                 }
             }
         };
+
         nextButton.setOnClickListener(next_listener);
 
-        questionField = (EditText)findViewById(R.id.editText3);
+        questionField = (TextView)findViewById(R.id.editText2);
 
-        answerField = (EditText)findViewById(R.id.editText4);
+        answerField = (EditText)findViewById(R.id.editText);
 
         displayNextQuestion();
+    }
+
+    private void displayResults() {
+        QuestionsResults quizResults = this.quiz.getQuizResults();
+        String generatedReport = generateResultsReport(quizResults);
+        questionField.setText(generatedReport, TextView.BufferType.NORMAL);
+        answerField.setText("", TextView.BufferType.NORMAL);
     }
 
     private void displayNextQuestion() {
         Question question = this.quiz.getNextQuestion();
         questionField.setText(question.getQuestionText(), TextView.BufferType.NORMAL);
+        answerField.setText("", TextView.BufferType.NORMAL);
     }
 
     private void saveAnswer() {
         Answer answer = new DefaultAnswer(answerField.getText().toString());
+        this.quiz.setAnswer(answer);
     }
 
     private AnsweredQuestion createAnsweredQuestion(Question question, Answer answer) {
         return new DefaultAnsweredQuestion(question, answer);
     }
 
-//    private void reportResults(QuestionsResults questionResults) {
-//        //TODO - improve output
-//        final List<AnsweredQuestion> correctlyAnsweredQuestions = questionResults.getCorrectlyAnsweredQuestions();
-//        final List<AnsweredQuestion> incorrectlyAnsweredQuestions = questionResults.getIncorrectlyAnsweredQuestions();
-//        int total = correctlyAnsweredQuestions.size() + incorrectlyAnsweredQuestions.size();
-//        System.out.println("Total # Questions "+total);
-//        System.out.println("Total # Correct "+correctlyAnsweredQuestions.size());
-//        System.out.println("Total # Incorrect "+incorrectlyAnsweredQuestions.size());
-//        System.out.println();
-//
-//        for(AnsweredQuestion answeredQuestion : incorrectlyAnsweredQuestions){
-//            System.out.println("Question: "+answeredQuestion.getQuestion().getQuestionText());
-//            System.out.println("Expected Answer: "+answeredQuestion.getQuestion().getExpectedAnswer());
-//            System.out.println("User Answer: "+answeredQuestion.getAnswer().getAnswer());
-//            System.out.println();
-//        }
-//    }
+    private String generateResultsReport(QuestionsResults questionResults) {
+        //TODO - improve output
+        final List<AnsweredQuestion> correctlyAnsweredQuestions = questionResults.getCorrectlyAnsweredQuestions();
+        final List<AnsweredQuestion> incorrectlyAnsweredQuestions = questionResults.getIncorrectlyAnsweredQuestions();
+        int total = correctlyAnsweredQuestions.size() + incorrectlyAnsweredQuestions.size();
+        StringBuilder builder = new StringBuilder();
+        builder.append("T "+total+" C "+correctlyAnsweredQuestions.size()+" I "+incorrectlyAnsweredQuestions.size()+"\n");
+
+        for(AnsweredQuestion answeredQuestion : incorrectlyAnsweredQuestions){
+            builder.append("Expected Answer: "+answeredQuestion.getQuestion().getExpectedAnswer().getAnswer()+ " User Answer: "+answeredQuestion.getAnswer().getAnswer()+"\n");
+        }
+
+        for(AnsweredQuestion answeredQuestion : correctlyAnsweredQuestions){
+            builder.append("Expected Answer: "+answeredQuestion.getQuestion().getExpectedAnswer().getAnswer()+ " User Answer: "+answeredQuestion.getAnswer().getAnswer()+"\n");
+        }
+
+        return builder.toString();
+    }
 
     private Set<Learnable> newLearnableItems() {
         HashSet<Learnable> allLearnableItems = new HashSet<>();
         allLearnableItems.add(new DefaultWord("to improve", "améliorer"));
         allLearnableItems.add(new DefaultWord("to cancel", "annuler"));
         allLearnableItems.add(new DefaultWord("to arrive", "arriver"));
-        allLearnableItems.add(new DefaultWord("to swallow", "awaler"));
+        allLearnableItems.add(new DefaultWord("to swallow", "avaler"));
         allLearnableItems.add(new DefaultWord("to confess", "avouer"));
         allLearnableItems.add(new DefaultWord("to chat", "bavarder"));
         allLearnableItems.add(new DefaultWord("to do DIY", "bricoler"));

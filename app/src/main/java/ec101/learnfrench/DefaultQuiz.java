@@ -75,7 +75,7 @@ public class DefaultQuiz implements Quiz {
     }
 
     @Override
-    public boolean isFinalQuestion() {
-        return this.questionsIterator.hasNext();
+    public boolean isFinished() {
+        return !this.questionsIterator.hasNext();
     }
 }
