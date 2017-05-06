@@ -40,6 +40,7 @@ public class FrenchWordsQAndA extends AppCompatActivity {
                 saveAnswer();
                 if(quiz.isFinished()){
                     displayResults();
+                    nextButton.setEnabled(false);
                 }else {
                     displayNextQuestion();
                     if(quiz.isFinished()){
@@ -86,14 +87,14 @@ public class FrenchWordsQAndA extends AppCompatActivity {
         final List<AnsweredQuestion> incorrectlyAnsweredQuestions = questionResults.getIncorrectlyAnsweredQuestions();
         int total = correctlyAnsweredQuestions.size() + incorrectlyAnsweredQuestions.size();
         StringBuilder builder = new StringBuilder();
-        builder.append("T "+total+" C "+correctlyAnsweredQuestions.size()+" I "+incorrectlyAnsweredQuestions.size()+"\n");
+        builder.append("Total "+total+" Correct "+correctlyAnsweredQuestions.size()+" Incorrect "+incorrectlyAnsweredQuestions.size()+"\n");
 
         for(AnsweredQuestion answeredQuestion : incorrectlyAnsweredQuestions){
-            builder.append("Expected Answer: "+answeredQuestion.getQuestion().getExpectedAnswer().getAnswer()+ " User Answer: "+answeredQuestion.getAnswer().getAnswer()+"\n");
+            builder.append("Expected: "+answeredQuestion.getQuestion().getExpectedAnswer().getAnswer()+ " Submitted: "+answeredQuestion.getAnswer().getAnswer()+"\n");
         }
 
         for(AnsweredQuestion answeredQuestion : correctlyAnsweredQuestions){
-            builder.append("Expected Answer: "+answeredQuestion.getQuestion().getExpectedAnswer().getAnswer()+ " User Answer: "+answeredQuestion.getAnswer().getAnswer()+"\n");
+            builder.append("Expected: "+answeredQuestion.getQuestion().getExpectedAnswer().getAnswer()+ " Submitted: "+answeredQuestion.getAnswer().getAnswer()+"\n");
         }
 
         return builder.toString();
