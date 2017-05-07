@@ -17,11 +17,13 @@ public class DefaultQuestionsResults implements QuestionsResults {
 
     public DefaultQuestionsResults(){
         super();
+        this.correctlyAnsweredQuestions = new ArrayList<>();
+        this.inCorrectlyAnsweredQuestions = new ArrayList<>();
     }
 
     private DefaultQuestionsResults(Parcel in){
-        correctlyAnsweredQuestions = toList(in.readParcelableArray(AnsweredQuestion.class.getClassLoader()));
-        inCorrectlyAnsweredQuestions = toList(in.readParcelableArray(AnsweredQuestion.class.getClassLoader()));
+        this.correctlyAnsweredQuestions = toList(in.readParcelableArray(AnsweredQuestion.class.getClassLoader()));
+        this.inCorrectlyAnsweredQuestions = toList(in.readParcelableArray(AnsweredQuestion.class.getClassLoader()));
     }
 
     private List<AnsweredQuestion> toList(Parcelable[] parcelableArray){
@@ -61,7 +63,7 @@ public class DefaultQuestionsResults implements QuestionsResults {
     public void writeToParcel(Parcel dest, int flags) {
         AnsweredQuestion[] correctAnswersArray = this.correctlyAnsweredQuestions.toArray(new AnsweredQuestion[this.correctlyAnsweredQuestions.size()]);
         dest.writeParcelableArray(correctAnswersArray, flags);
-        AnsweredQuestion[] incorrectAnswersArray = this.inCorrectlyAnsweredQuestions.toArray(new AnsweredQuestion[this.correctlyAnsweredQuestions.size()]);
+        AnsweredQuestion[] incorrectAnswersArray = this.inCorrectlyAnsweredQuestions.toArray(new AnsweredQuestion[this.inCorrectlyAnsweredQuestions.size()]);
         dest.writeParcelableArray(incorrectAnswersArray, flags);
     }
 

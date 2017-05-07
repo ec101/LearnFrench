@@ -15,12 +15,18 @@ public class DefaultAnsweredQuestion implements AnsweredQuestion {
     public DefaultAnsweredQuestion(Question question, Answer answer){
         super();
         //TODO - check inputs
+        if(question == null){
+            throw new RuntimeException("Question should never be null");
+        }
         this.question = question;
         this.answer = answer;
     }
 
     private DefaultAnsweredQuestion(Parcel in){
         this.question = in.readParcelable(DefaultWordQuestion.class.getClassLoader());
+        if(this.question == null){
+            throw new RuntimeException("Question should never be null");
+        }
         this.answer = in.readParcelable(DefaultAnswer.class.getClassLoader());
     }
 

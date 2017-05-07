@@ -55,12 +55,18 @@ public class ResultsActivity extends AppCompatActivity {
         StringBuilder builder = new StringBuilder();
         builder.append("Total "+total+" Correct "+correctlyAnsweredQuestions.size()+" Incorrect "+incorrectlyAnsweredQuestions.size()+"\n");
 
-        for(AnsweredQuestion answeredQuestion : incorrectlyAnsweredQuestions){
-            builder.append("Expected: "+answeredQuestion.getQuestion().getExpectedAnswer().getAnswer()+ " Submitted: "+answeredQuestion.getAnswer().getAnswer()+"\n");
+        if(incorrectlyAnsweredQuestions.size() > 0) {
+            builder.append("\nIncorrect\n");
+            for (AnsweredQuestion answeredQuestion : incorrectlyAnsweredQuestions) {
+                builder.append("Expected: " + answeredQuestion.getQuestion().getExpectedAnswer().getAnswer() + " Submitted: " + answeredQuestion.getAnswer().getAnswer() + "\n");
+            }
         }
 
-        for(AnsweredQuestion answeredQuestion : correctlyAnsweredQuestions){
-            builder.append("Expected: "+answeredQuestion.getQuestion().getExpectedAnswer().getAnswer()+ " Submitted: "+answeredQuestion.getAnswer().getAnswer()+"\n");
+        if(correctlyAnsweredQuestions.size() > 0) {
+            builder.append("\nCorrect\n");
+            for (AnsweredQuestion answeredQuestion : correctlyAnsweredQuestions) {
+                builder.append("Expected: " + answeredQuestion.getQuestion().getExpectedAnswer().getAnswer() + " Submitted: " + answeredQuestion.getAnswer().getAnswer() + "\n");
+            }
         }
 
         return builder.toString();
