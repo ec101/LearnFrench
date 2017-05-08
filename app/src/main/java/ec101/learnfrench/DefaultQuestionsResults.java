@@ -21,11 +21,6 @@ public class DefaultQuestionsResults implements QuestionsResults {
         this.inCorrectlyAnsweredQuestions = new ArrayList<>();
     }
 
-    private DefaultQuestionsResults(Parcel in){
-        this.correctlyAnsweredQuestions = toList(in.readParcelableArray(AnsweredQuestion.class.getClassLoader()));
-        this.inCorrectlyAnsweredQuestions = toList(in.readParcelableArray(AnsweredQuestion.class.getClassLoader()));
-    }
-
     private List<AnsweredQuestion> toList(Parcelable[] parcelableArray){
         ArrayList<AnsweredQuestion> list = new ArrayList<AnsweredQuestion>();
         for(Parcelable parcel : parcelableArray){
@@ -33,6 +28,11 @@ public class DefaultQuestionsResults implements QuestionsResults {
             list.add(answeredQuestion);
         }
         return list;
+    }
+
+    private DefaultQuestionsResults(Parcel in){
+        this.correctlyAnsweredQuestions = toList(in.readParcelableArray(AnsweredQuestion.class.getClassLoader()));
+        this.inCorrectlyAnsweredQuestions = toList(in.readParcelableArray(AnsweredQuestion.class.getClassLoader()));
     }
 
     @Override

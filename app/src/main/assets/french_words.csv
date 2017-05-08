@@ -1,0 +1,441 @@
+Weather,il fait beau,It's nice
+Weather,il fait chaud,It's warm
+Weather,il pleut ,It's raining
+Weather,il neige,It's snowing
+Weather,il y a du vent,It's windy
+Weather,il y a quelque nuages,There are some clouds
+Weather,La moité nord,The nothern part
+Weather,éclaircies,sunny spells
+Weather,la ciel couvert,cloudy sky
+Weather,la humidité,humidity
+Weather,le orage,storm
+Weather,le tonnerre,thunder
+Weather,la brume,mist
+Weather,le brouillard,fog
+Weather,le vent,wind
+Weather,la glace,ice
+Weather,le soleil,sun
+Weather,le éclair,lightning
+Weather,il fait gris,it's grey
+Weather,il fait doux,it's soft
+Weather,il fait un temps magnifique,it's a magnificent day
+Weather,il fait 20 degres,its 20 degrees
+Weather,la canicule,heat wave
+Weather,la gel,frost
+Weather,le neige,snow
+Weather,le nuage,cloud
+Weather,l'hiver,winter
+Weather,l'été,summer
+Weather,le printemps,spring
+Weather,l'automne,autumn
+Weather,au nord,the north
+Weather,au sud,the south
+Weather,a l'est,the east
+Weather,a l'ouest,the west
+Weather,au centre,the middle
+Weather,au millieu,the middle
+Weather,souffler,to blow
+Weather,briller,to shine brightly
+Weather,tomber,to fall
+Weather,pleuvoir,to rain
+Weather,attiendre,to reach
+Weather,se déplacer,to move
+Weather,commencer,to start
+Weather,neiger,to snow
+Weather,la frontier,the border
+Weather,se trouve,is found at
+Weather,se situe,is located at
+Weather,des averses,heavy rain showers
+Housework,ranger,to tidy
+Housework,organiser,to organise
+Housework,faire le ménage,to do housework
+Housework,faire la lessive,to wash clothes
+Housework,faire les vaisselles,to wash the dishes
+Housework,faire le repessage,to do the ironing
+Housework,passer l'aspirateur,to vacuum
+Housework,laver la ligne,to wash clothes
+Housework,les taches ménagères,the household tasks
+Housework,faire les poussières,to do the dusting
+Housework,faire le cusisine,to cook
+Accept / Reject,Accepter (avec grand plasir),to accept (with pleasure)
+Accept / Reject,"Oui, bien sûr",yes of course
+Accept / Reject,Pas de probleme,no problem
+Accept / Reject,Oui d'accord,yes that's ok
+Accept / Reject,Très volontiers,"yes, willingly (formal)"
+Accept / Reject,Bien entendu,of course
+Accept / Reject,C'est impossible,it's impossible
+Accept / Reject,Quell domage...,what a shame
+Accept / Reject,Je suis (vraiment) désolé,I am (very) sorry
+Accept / Reject,Je ne peux pas accepter,I cannot accept
+Accept / Reject,"non, pas de question","no, out of the question"
+Accept / Reject,Je regrette vraiment,I regret
+Certitude,Certainement,Certainely
+Certitude,Sûrement,Surely
+Certitude,Sans acun doute,Without any doubt
+Certitude,peut être,perhaps
+Certitude,probablement,probably
+Certitude,sans doute,without a doubt
+Opinion,je pense que,I think that
+Opinion,je trouve que,I find that
+Opinion,je crois que,I believe that
+Opinion,D'après moi,According to me
+Opinion,à mon avis,In my opinion
+Opinion,En ce qui me concerne,What concerns me
+Opinion,Selon moi,In my opinion (2)
+Opinion,il me semble que,It seems to me
+Opinion,De mon point de vue,My point of view is
+Email greeting/ending,Bonjour,Hello
+Email greeting/ending,Chèr,Dear
+Email greeting/ending,Salut,Hi
+Email greeting/ending,Je t'embrasse,Hugs
+Email greeting/ending,Bissous,Kisses
+Email greeting/ending,à Bientot,See you soon
+Email greeting/ending,à tout à l'heure,See you soon
+Email greeting/ending,Chèr monsieur,Dear sir
+Email greeting/ending,Bonjour monsieur,Helllo sir
+Email greeting/ending,"Madame, Monsieur","Madam, Sir"
+Email greeting/ending,Bien à vous,Best to you
+Email greeting/ending,(tres) cordialement,yours cordially
+Email greeting/ending,Sincèrement,yours sincerely
+Email greeting/ending,"Veuillez agreer, madame, monsieur, mes sincères salutations distingees",Very formal ending used for job applications
+Question words,Quel,Which
+Question words,Quoi / Que,What
+Question words,Qui,Who
+Question words,Comment,How
+Question words,Combien,How many
+Question words,Pourquoi,Why
+Question words,Quand,When
+Question words,Où,Where
+Household words,la cuisine,the kitchen
+Household words,la chambre,the bedroom
+Household words,la pièce,a room
+Household words,le couloir,corridor
+Household words,la salle de bains,the bathroom
+Household words,le salon,the living room
+Household words,le salle à manger,the dining room
+Household words,le palier,the landing
+Household words,le bureau,the office
+Household words,les meubles,the furniture
+Household words,le lit,a bed
+Household words,le miroir,a mirror
+Household words,le tableaux,a picture / painting
+Household words,la armoire,a wardrobe
+Household words,la chaise,a chair
+Household words,la étagère,a shelf
+Household words,la table,a table
+Household words,le tapis,a carpet
+Household words,la fenêtre,a window
+Household words,le fauteuil,armchair
+Household words,le canapé,sofa
+Household words,le coffre-fort,safe-deposit box
+Household words,les volets,the shutters
+Localisation words,à droit,to the right
+Localisation words,à gauche,to the left
+Localisation words,au-dessus de,above
+Localisation words,en-dessous de,below
+Localisation words,en face de,in front of / facing
+Localisation words,au fond de,at the bottom of
+Localisation words,à côté de,beside
+Localisation words,au milleu de,in the middle of
+Localisation words,autour de,around
+Localisation words,sous,below
+Localisation words,sur,on top
+Localisation words,devant,in front
+Localisation words,derrière,behind
+Body Parts,la tête,head
+Body Parts,la main,hand
+Body Parts,les yeux,eyes
+Body Parts,le nez,nose
+Body Parts,la bouche,mouth
+Body Parts,le genou,knee
+Body Parts,le pied,foot
+Body Parts,la jambe,leg
+Body Parts,le ventre,torso
+Body Parts,l'oreille,ear
+Body Parts,le doigt,finger
+Body Parts,le pouce,thumb
+Body Parts,l'orteil (m),toe
+Body Parts,le bras,arm
+Words indicating time,aujourd'hui,today
+Words indicating time,demain,tomorrow
+Words indicating time,hier,yesterday
+Words indicating time,maintenant,now
+Words indicating time,de nos jours,in our time
+Words indicating time,en ce moment,at the moment
+Words indicating time,dans les années (90),in the years
+Words indicating time,autrefois,another time
+Words indicating time,dans le temps,in the time
+Words indicating time,à ce moment-là,in that time
+Words indicating time,à cette epoque-là,in that epoque
+Personal traits,fédérateur,leader
+Personal traits,les qualitiés,the qualities
+Personal traits,les défauts,the faults
+Personal traits,dans le paraître,care about one's appearance
+Personal traits,confiance,confidence
+Personal traits,ordonné,organised
+Personal traits,l'image de soi,self image
+Personal traits,narcissique,narcissistic
+Personal traits,actif,active
+Personal traits,entreprenant,entrepreneurial
+Personal traits,superficial,superficial
+Personal traits,meticuleux,miticulous
+Personal traits,collaborateur,collaborator
+Personal traits,paresseux,lazy
+Personal traits,jamis ponctuel,never on time
+Personal traits,procrastinateur,procrastinator
+Personal traits,pressé,busy
+Personal traits,joyeux,joyful
+Personal traits,modeste,modest
+Personal traits,humble,humble
+Personal traits,prétentieux,pretentious
+Personal traits,obsessional,obsessive
+Personal traits,extravagant,extravagant
+Personal traits,provocateur,troublemaker
+Personal traits,dynamique,dynamic
+Personal traits,orgueilleux,big headed
+Personal traits,amoureux,loving
+Personal traits,idéaliste,idealist
+Personal traits,curieux,courious
+Personal traits,triste,sad
+Personal traits,indépendante,independent
+Personal traits,pessimiste,pessimist
+Personal traits,ambitieux,ambitious
+Personal traits,timide,timid
+Personal traits,égoiste,egotist
+Personal traits,autoritaire,authoritarian
+Personal traits,jaloux,jealous
+Personal traits,chanceux,lucky
+Personal traits,indifferent,indifferent
+Personal traits,énervé,irratiable
+Personal traits,intéressant,interesting
+Personal traits,compliqué,complicated
+Personal traits,fort,strong
+Personal traits,maladroit,clumsy
+Personal traits,courageux,courageous
+Personal traits,réaliste,realistic
+Personal traits,généreux,generous
+Personal traits,bavard,talkative
+Work,le boulot,the job
+Work,les congés payés,the paid vacation
+Work,le contrat de travail,the work contract
+Work,les horaires,the hours
+Work,le travail à temps partiel,part time work
+Work,l'augmentation,a raise (in pay)
+Work,le salaire,the salary
+Work,le bureau,the office
+Work,l'atelier,workshop
+Work,l'entreprise,the company
+Work,l'usine,the factory
+Work,le cadre,the manager
+Work,le directeur,the director
+Work,l'ouvrier,the worker (usually the lowest form of worker)
+Work,le personnel,the personnel
+Work,le travailleur,the worker
+Work,faire la grève,to go on strike
+Work,le syndicat,union
+Work,le candidat,the candidate
+Work,chercher du travail,to look for work
+Work,le chômeur,the unployed person
+Work,l'experience professionnelle,professional experience
+Work,l'offre d'emploi,the offer of employment
+Work,bien payé,well paid
+Work,épanouissant,enriching / developing / blossoming
+Work,stressant,stressful
+Work,la collègue,the colleague
+Work,le bulletin de salaire,the pay slip
+Work,l'impot,tax
+Clothes,la chemise,shirt
+Clothes,le pantalon,pants/trousers
+Clothes,le manteau,coat
+Clothes,le haut,top
+Clothes,le pull,sweater
+Clothes,le short,shorts
+Clothes,la robe,dress
+Clothes,la jupe,skirt
+Clothes,l'imperméable,raincoat
+Clothes,le blouson,jacket
+Clothes,l'anorak,heavy coat
+Clothes,la veste,jacket
+Clothes,le maillot de bain,bathing suit
+Clothes,le soutien-gorge,bra
+Clothes,le costume,suit
+Clothes,le smoking,tuxedo
+Clothes,la cravate,tie
+Clothes,le noeud papillon,bow tie
+Clothes,la ceinture,belt
+Clothes,les sous vetments,underwear
+Clothes,le caleçon,boxers
+Clothes,les bottes,boots
+Clothes,les sandales,sandals
+Clothes,les chaussettes,socks
+Clothes,les chaussures,shoes
+Clothes,le parapluie,the unbrella
+Clothes,la montre,the watch
+Clothes,l'écharpe,the scarf
+Clothes,la canne,the walking stick
+Clothes,enrouler,to wrap around / to wind up
+Clothes,le gant,the glove
+Clothes,la bague,the ring
+Clothes,aider à mettre ,to help put on
+Various,témoignage,testimony
+Various,carré,square
+Various,le fait divers,small article
+Various,le chemin,the way / the path
+Various,le cafard,cockroach
+Various,le dessein ,the intention/goal
+Various,le pin,pine tree
+Various,le lame,razor balde
+Various,chagrin,sadness
+Various,le baluchon,the bindle
+Various,le fuseau horaire,the timezone
+Various,jour férié,bank holiday / public holiday
+Various,bine être,wellbeing
+Various,un domestique,a servant
+Idioms,avoir les patates,to be in great form
+Idioms,avoir la pêche,to be in great form
+Idioms,être lessivé,to be wrecked tired
+Idioms,être crevé,to be wrecked tired
+Idioms,avoir la tête dans les nuages,have your head in the clouds
+Idioms,avoir un poli dans la main,to be very lazy/useless
+Idioms,se tenir à carreau,calm down
+Idioms,fumer comme un pompier,to smoke a lot
+Idioms,mettre les pieds dans le plat,to speak your mind
+Idioms,rentrer dans sa coquille,retreat into your shell
+Idioms,se couper les cheveux en quatre,to go above and beyond to achieve a goal
+Idioms,casser les pieds,to wreck someone's head
+Idioms,avoir le melon,to have a big head
+Idioms,avoir la main vert,to be good at gardening
+Idioms,broyer du noir,things are going badly
+Idioms,avoid le cafard,things are going badly
+Idioms,tomber dans les pommes,to be sick
+Idioms,donner sa langue au chat,not to know the answer to a question
+Idioms,raconter des salades,tell stories which are untrue
+Idioms,attention ca va faire mal,it's going to hurt
+Idioms,quelle nouille,what an idiot
+Idioms,attention je t'ai à l'oeil,I've got my eve on you
+Idioms,va te faire cuire un oeuf,get lost!
+Idioms,c'est le pompon,that's where I draw the line
+Idioms,t'es pas ma tasse de tea,you're not my cup of tea
+Idioms,quelle peau de vache,bastard
+Idioms,mi figue mi raisan,neither good nor bad
+Idioms,je suis une bombe,I'm in great form
+Idioms,quelle temps de chien,what horrible weather
+Idioms,c'est trop chouette,that's super
+Idioms,mon choux,my dear
+Idioms,ca va être ta fête,you're going to get it
+Idioms,ramènes pas ta fraise,shut up
+Idioms,c'est la fin des haricots,that's the last straw
+Idioms,t'es pas une lumière,you're not the brightest
+Various,malgre,in spite of
+Various,être angoissé,to be worried
+Various,ennyeux,boring
+Various,paisible,peaceful
+Various,la soie,silk
+Various,le défi,challenge
+Various,profiter de,to make use of
+Various,forfait,fixed price
+Various,payer en plusiers fois,pay in installments
+Localisation words,en haut,on the top
+Localisation words,en bas,at the bottom
+Various,le sondage,survey / poll
+Vacation,prendre des rensigements,to search for information
+Vacation,faire la valise,packing
+Vacation,les habitants,the people (living in a country)
+Vacation,le parcour,journey / route
+Vacation,un périple,itinerant journey
+Vacation,des échantillons,small bottles (for make-up)
+Various,la grasse matinée,a lie in
+Vacation,mettre sous vide,to vacum pack
+Cultural Activities,un pièce de theatre,a play
+Cultural Activities,assister à,to attend
+Cultural Activities,le chapiteau,circus big top
+Cultural Activities,les activities culturelle,cultural activities
+Cultural Activities,les comédies musicales,musical comedies
+Cultural Activities,les comédies,comedies (theatre)
+Cultural Activities,le drame,drama play
+Cultural Activities,les tragédies,tragedies
+Cultural Activities,aller au musée,go to a museum
+Cultural Activities,aller au cinema,go to the cinema
+Cultural Activities,écouter de la musique,listen to music
+Cultural Activities,aller aux concerts,go to concerts
+Cultural Activities,aller à l'opera,go to the opera
+Cultural Activities,l'oeuvre (la),the work (of art)
+Cultural Activities,l'ouvreure,the usher
+Cultural Activities,la affiche,the poster
+Various,la sourire,the smile
+Various,l'ombre,the shadow
+Various,l'âme,the soul
+Various,le bouchon,the cork (wine bottle)
+Various,bande original,movie soundtrack
+Vacation,aôutien,person who goes on holiday in August
+Vacation,le pélerin,the pilgrim
+Vacation,juilliteste,person who goes on holiday in July
+Vacation,faire du escalade,to climb
+Vacation,routard,backpacker
+Vacation,luxuriant,luxurious object
+Various,l'instituteur,teacher
+Various,côuteux,expensive
+Cultural Activities,le dramaturge,playwright
+Cultural Activities,le metteur en scène,theatre director
+Cultural Activities,les comédiens,actors (theatre)
+Cultural Activities,les costumes,the costumes
+Cultural Activities,le costumier,the costume designer
+Cultural Activities,le décor,set
+Cultural Activities,le décorateur,set decorator
+Cultural Activities,la maquillage,make up
+Cultural Activities,le maquilleur,the make-up artist
+Sentiments,épuisé,exhausted
+Sentiments,honteux,ashamed
+Sentiments,effrayé,frightened
+Various,le chauffard,bad driver
+Various,la pierre,stone
+Various,le cailloux,small stone
+Various,le crôute,the crust
+Various,la violence gratuite,unnecessary violence
+Sentiments,amoureux,loving
+Sentiments,dégoûté,disgusted
+Sentiments,ennuyé,"preoccupied, worried"
+Sentiments,étonné,surprised
+Sentiments,exaspéré,exasperated
+Sentiments,fâché,angry
+Sentiments,frustre,frustrated
+Sentiments,gêné,"embarrassed, uncomfortable"
+Sentiments,heureux,happy
+Sentiments,hystérique,hysterical
+Sentiments,plein d'espoir,full of hope
+Sentiments,triste,sad
+Sentiments,troublé,"hazy, vague"
+Sentiments,colère,anger
+Sentiments,haine,hate
+Sentiments,peine,sorrow
+Adjectives,difficile,difficult
+Adjectives,efficace,efficient
+Adjectives,aimable,adorable
+Adjectives,amical,likeable
+Adjectives,froid,cold
+Adjectives,léger,light hearted
+Adjectives,franc,frank
+Adjectives,amoureux,loving
+Adjectives,sliencieux,slient
+Adjectives,doux,gentle
+Adjectives,mou,soft
+Adjectives,passionné,passionate
+Adjectives,modéré,moderate
+Adjectives,poli,polite
+Adjectives,vrai,turthful
+Adjectives,gai,gay
+Adjectives,prudent,prudent
+Adjectives,méchant,naughty
+Adjectives,intelligent,intelligent
+Adjectives,fréquent,frequent
+Adjectives,patient,patient
+Adjectives,bruyant,noisy
+Adjectives,puissant,powerful
+Adjectives,lent,slow
+Adjectives,bref,brief
+Adjectives,gentil,nice
+Adjectives,lisible,legible
+Adjectives,méthode,methodical
+Adjectives,excès,excessive
+Adjectives,sérieux,serious
+Adjectives,suffisant,sufficient

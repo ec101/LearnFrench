@@ -1,13 +1,19 @@
 package ec101.learnfrench;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -26,21 +32,27 @@ public class QuizActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
-        Set<Learnable> allLearnableItems = newLearnableItems();
+        Set<Learnable> allLearnableItems = null;
+        try {
+            allLearnableItems = newLearnableItems();
+        } catch (IOException e) {
+            Toast message = Toast.makeText(this, "Unable to load words from file", Toast.LENGTH_LONG);
+            message.show();
+        }
 
         this.quiz = new DefaultQuiz(allLearnableItems);
 
-        nextButton = (Button)findViewById(R.id.button);
-        View.OnClickListener next_listener = new View.OnClickListener(){
+        nextButton = (Button) findViewById(R.id.button);
+        View.OnClickListener next_listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 saveAnswer();
-                if(quiz.isFinished()){
+                if (quiz.isFinished()) {
                     nextButton.setEnabled(false);
                     finishQuiz();
-                }else {
+                } else {
                     displayNextQuestion();
-                    if(quiz.isFinished()){
+                    if (quiz.isFinished()) {
                         nextButton.setText("Finished");
                     }
                 }
@@ -49,14 +61,14 @@ public class QuizActivity extends AppCompatActivity {
 
         nextButton.setOnClickListener(next_listener);
 
-        questionField = (TextView)findViewById(R.id.editText2);
+        questionField = (TextView) findViewById(R.id.editText2);
 
-        answerField = (EditText)findViewById(R.id.editText);
+        answerField = (EditText) findViewById(R.id.editText);
 
         displayNextQuestion();
     }
 
-    private void finishQuiz(){
+    private void finishQuiz() {
         Intent intent = new Intent(this, ResultsActivity.class);
         intent.putExtra(QUIZ_RESULTS, quiz.getQuizResults());
         startActivity(intent);
@@ -77,18 +89,19 @@ public class QuizActivity extends AppCompatActivity {
         return new DefaultAnsweredQuestion(question, answer);
     }
 
-    private Set<Learnable> newLearnableItems() {
+    private Set<Learnable> newLearnableItems() throws IOException {
+        Resources resources = getResources();
+        InputStream inputStream = resources.getAssets().open("french_words.csv");
+        BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+
         HashSet<Learnable> allLearnableItems = new HashSet<>();
-        allLearnableItems.add(new DefaultWord("to improve", "améliorer"));
-        allLearnableItems.add(new DefaultWord("to cancel", "annuler"));
-        allLearnableItems.add(new DefaultWord("to arrive", "arriver"));
-        allLearnableItems.add(new DefaultWord("to swallow", "avaler"));
-        allLearnableItems.add(new DefaultWord("to confess", "avouer"));
-        allLearnableItems.add(new DefaultWord("to chat", "bavarder"));
-        allLearnableItems.add(new DefaultWord("to do DIY", "bricoler"));
-        allLearnableItems.add(new DefaultWord("to burn", "brûler"));
-        allLearnableItems.add(new DefaultWord("to move house", "déménager"));
-        allLearnableItems.add(new DefaultWord("to over take", "dépasser"));
+        String csvLine = reader.readLine();
+        while (csvLine != null) {
+            String[] csvLineValues = csvLine.split(",");
+            allLearnableItems.add(new DefaultWord(csvLineValues[2], csvLineValues[1]));
+            csvLine = reader.readLine();
+        }
+        reader.close();
         return allLearnableItems;
     }
 }

@@ -11,7 +11,7 @@ import java.util.Set;
 
 public class DefaultQuiz implements Quiz {
 
-    private static final int NUMBER_OF_QUESTIONS = 5;
+    private static final int NUMBER_OF_QUESTIONS = 20;
 
     private Set<Learnable> allLearnableItems;
     private Set<Question> questionsToAsk;
