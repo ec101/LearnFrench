@@ -6,7 +6,7 @@ package ec101.learnfrench;
 
 public class DefaultQuestionBuilder implements QuestionBuilder<Learnable> {
 
-    private WordQuestionBuilder wordQuestionBuilder = new WordQuestionBuilder();
+    private final QuestionBuilder wordQuestionBuilder = new WordQuestionBuilder();
 
     public DefaultQuestionBuilder(){
         super();

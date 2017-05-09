@@ -14,9 +14,11 @@ public class DefaultAnsweredQuestion implements AnsweredQuestion {
 
     public DefaultAnsweredQuestion(Question question, Answer answer){
         super();
-        //TODO - check inputs
+        if(answer == null){
+            throw new LearnFrenchException("Answer should never be null");
+        }
         if(question == null){
-            throw new RuntimeException("Question should never be null");
+            throw new LearnFrenchException("Question should never be null");
         }
         this.question = question;
         this.answer = answer;
@@ -60,10 +62,12 @@ public class DefaultAnsweredQuestion implements AnsweredQuestion {
 
     public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {
 
+        @Override
         public DefaultAnsweredQuestion createFromParcel(Parcel in) {
             return new DefaultAnsweredQuestion(in);
         }
 
+        @Override
         public DefaultAnsweredQuestion[] newArray(int size) {
             return new DefaultAnsweredQuestion[size];
         }

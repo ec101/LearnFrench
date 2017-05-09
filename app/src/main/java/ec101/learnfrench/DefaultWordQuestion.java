@@ -14,7 +14,9 @@ public class DefaultWordQuestion implements Question {
 
     public DefaultWordQuestion(Word word){
         super();
-        //TODO - check validity of word
+        if(word == null){
+            throw new LearnFrenchException("Word should never be null");
+        }
         this.word = word;
         this.answer = new DefaultAnswer(this.word.getFrench());
     }
@@ -47,10 +49,12 @@ public class DefaultWordQuestion implements Question {
 
     public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {
 
+        @Override
         public DefaultWordQuestion createFromParcel(Parcel in) {
             return new DefaultWordQuestion(in);
         }
 
+        @Override
         public DefaultWordQuestion[] newArray(int size) {
             return new DefaultWordQuestion[size];
         }

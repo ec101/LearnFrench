@@ -6,5 +6,5 @@ package ec101.learnfrench;
 
 public enum LearnableType {
 
-    WORD;
+    WORD
 }

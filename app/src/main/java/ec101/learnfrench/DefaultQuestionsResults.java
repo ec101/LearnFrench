@@ -22,7 +22,7 @@ public class DefaultQuestionsResults implements QuestionsResults {
     }
 
     private List<AnsweredQuestion> toList(Parcelable[] parcelableArray){
-        ArrayList<AnsweredQuestion> list = new ArrayList<AnsweredQuestion>();
+        ArrayList<AnsweredQuestion> list = new ArrayList<>();
         for(Parcelable parcel : parcelableArray){
             AnsweredQuestion answeredQuestion = (AnsweredQuestion) parcel;
             list.add(answeredQuestion);
@@ -69,10 +69,12 @@ public class DefaultQuestionsResults implements QuestionsResults {
 
     public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {
 
+        @Override
         public DefaultQuestionsResults createFromParcel(Parcel in) {
             return new DefaultQuestionsResults(in);
         }
 
+        @Override
         public DefaultQuestionsResults[] newArray(int size) {
             return new DefaultQuestionsResults[size];
         }

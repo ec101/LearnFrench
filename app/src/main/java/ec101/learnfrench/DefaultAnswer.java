@@ -13,7 +13,9 @@ public class DefaultAnswer implements Answer {
 
     public DefaultAnswer(String answer){
         super();
-        //TODO - check input
+        if(answer == null){
+            throw new LearnFrenchException("Answer cannot have value of null");
+        }
         this.answer = answer;
     }
 
@@ -38,10 +40,12 @@ public class DefaultAnswer implements Answer {
 
     public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {
 
+        @Override
         public DefaultAnswer createFromParcel(Parcel in) {
             return new DefaultAnswer(in);
         }
 
+        @Override
         public DefaultAnswer[] newArray(int size) {
             return new DefaultAnswer[size];
         }

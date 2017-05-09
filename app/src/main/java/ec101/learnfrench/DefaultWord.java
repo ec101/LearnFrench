@@ -9,12 +9,17 @@ import android.os.Parcelable;
 
 public class DefaultWord implements Word {
 
-    final String english;
-    final String french;
+    private final String english;
+    private final String french;
 
     public DefaultWord(String english, String french){
         super();
-        //TODO - check that english and french input is valid
+        if(english == null || english.isEmpty()){
+            throw new LearnFrenchException("English word should never be null or empty");
+        }
+        if(french == null || french.isEmpty()){
+            throw new LearnFrenchException("French word should never be null or empty");
+        }
         this.english = english;
         this.french = french;
     }
@@ -52,10 +57,12 @@ public class DefaultWord implements Word {
 
     public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {
 
+        @Override
         public DefaultWord createFromParcel(Parcel in) {
             return new DefaultWord(in);
         }
 
+        @Override
         public DefaultWord[] newArray(int size) {
             return new DefaultWord[size];
         }

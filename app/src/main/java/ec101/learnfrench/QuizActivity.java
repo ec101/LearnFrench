@@ -2,8 +2,8 @@ package ec101.learnfrench;
 
 import android.content.Intent;
 import android.content.res.Resources;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,7 +15,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 public class QuizActivity extends AppCompatActivity {
@@ -53,7 +52,7 @@ public class QuizActivity extends AppCompatActivity {
                 } else {
                     displayNextQuestion();
                     if (quiz.isFinished()) {
-                        nextButton.setText("Finished");
+                        nextButton.setText(R.string.finished);
                     }
                 }
             }
@@ -83,10 +82,6 @@ public class QuizActivity extends AppCompatActivity {
     private void saveAnswer() {
         Answer answer = new DefaultAnswer(answerField.getText().toString());
         this.quiz.setAnswer(answer);
-    }
-
-    private AnsweredQuestion createAnsweredQuestion(Question question, Answer answer) {
-        return new DefaultAnsweredQuestion(question, answer);
     }
 
     private Set<Learnable> newLearnableItems() throws IOException {
