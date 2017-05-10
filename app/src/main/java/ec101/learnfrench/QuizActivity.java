@@ -93,7 +93,7 @@ public class QuizActivity extends AppCompatActivity {
         String csvLine = reader.readLine();
         while (csvLine != null) {
             String[] csvLineValues = csvLine.split(",");
-            allLearnableItems.add(new DefaultWord(csvLineValues[2], csvLineValues[1]));
+            allLearnableItems.add(new DefaultWord(csvLineValues[0], csvLineValues[2], csvLineValues[1]));
             csvLine = reader.readLine();
         }
         reader.close();

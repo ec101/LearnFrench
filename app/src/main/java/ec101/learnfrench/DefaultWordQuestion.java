@@ -28,7 +28,12 @@ public class DefaultWordQuestion implements Question {
 
     @Override
     public String getQuestionText() {
-        return "What is the french word for "+word.getEnglish()+"?";
+        StringBuilder builder = new StringBuilder();
+        builder.append("What is the french word for ")
+                .append(word.getEnglish()).append("? (")
+                .append(word.getSubject())
+                .append(")");
+        return builder.toString();
     }
 
     @Override

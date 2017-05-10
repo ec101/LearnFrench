@@ -11,20 +11,26 @@ public class DefaultWord implements Word {
 
     private final String english;
     private final String french;
+    private final String subject;
 
-    public DefaultWord(String english, String french){
+    public DefaultWord(String subject, String english, String french){
         super();
+        if(subject == null || subject.isEmpty()){
+            throw new LearnFrenchException("The word's subject should never be null or empty");
+        }
         if(english == null || english.isEmpty()){
             throw new LearnFrenchException("English word should never be null or empty");
         }
         if(french == null || french.isEmpty()){
             throw new LearnFrenchException("French word should never be null or empty");
         }
+        this.subject = subject;
         this.english = english;
         this.french = french;
     }
 
     private DefaultWord(Parcel in){
+        this.subject = in.readString();
         this.english = in.readString();
         this.french = in.readString();
     }
@@ -40,6 +46,11 @@ public class DefaultWord implements Word {
     }
 
     @Override
+    public String getSubject() {
+        return subject;
+    }
+
+    @Override
     public LearnableType getLearnableType() {
         return LearnableType.WORD;
     }
@@ -51,6 +62,7 @@ public class DefaultWord implements Word {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(this.subject);
         dest.writeString(this.english);
         dest.writeString(this.french);
     }

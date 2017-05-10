@@ -10,4 +10,5 @@ public interface Word extends Learnable {
 
     String getEnglish();
 
+    String getSubject();
 }
