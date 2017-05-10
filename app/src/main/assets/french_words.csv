@@ -89,10 +89,10 @@ Email greeting/ending,Chèr,Dear
 Email greeting/ending,Salut,Hi
 Email greeting/ending,Je t'embrasse,Hugs
 Email greeting/ending,Bissous,Kisses
-Email greeting/ending,à Bientot,See you soon
+Email greeting/ending,à Bientôt,See you soon
 Email greeting/ending,à tout à l'heure,See you soon
 Email greeting/ending,Chèr monsieur,Dear sir
-Email greeting/ending,Bonjour monsieur,Helllo sir
+Email greeting/ending,Bonjour monsieur,Hello sir
 Email greeting/ending,"Madame, Monsieur","Madam, Sir"
 Email greeting/ending,Bien à vous,Best to you
 Email greeting/ending,(tres) cordialement,yours cordially
@@ -102,7 +102,7 @@ Question words,Quel,Which
 Question words,Quoi / Que,What
 Question words,Qui,Who
 Question words,Comment,How
-Question words,Combien,How many
+Question words,Combien de,How many
 Question words,Pourquoi,Why
 Question words,Quand,When
 Question words,Où,Where
@@ -312,7 +312,7 @@ Idioms,donner sa langue au chat,not to know the answer to a question
 Idioms,raconter des salades,tell stories which are untrue
 Idioms,attention ca va faire mal,it's going to hurt
 Idioms,quelle nouille,what an idiot
-Idioms,attention je t'ai à l'oeil,I've got my eve on you
+Idioms,attention je t'ai à l'oeil,"watch out, I've got my eye on you"
 Idioms,va te faire cuire un oeuf,get lost!
 Idioms,c'est le pompon,that's where I draw the line
 Idioms,t'es pas ma tasse de tea,you're not my cup of tea
@@ -335,14 +335,14 @@ Various,le défi,challenge
 Various,profiter de,to make use of
 Various,forfait,fixed price
 Various,payer en plusiers fois,pay in installments
-Localisation words,en haut,on the top
-Localisation words,en bas,at the bottom
+Localisation words,en haut,on high
+Localisation words,en bas,down low
 Various,le sondage,survey / poll
 Vacation,prendre des rensigements,to search for information
 Vacation,faire la valise,packing
 Vacation,les habitants,the people (living in a country)
 Vacation,le parcour,journey / route
-Vacation,un périple,itinerant journey
+Vacation,le périple,itinerant journey
 Vacation,des échantillons,small bottles (for make-up)
 Various,la grasse matinée,a lie in
 Vacation,mettre sous vide,to vacum pack
@@ -372,7 +372,6 @@ Vacation,le pélerin,the pilgrim
 Vacation,juilliteste,person who goes on holiday in July
 Vacation,faire du escalade,to climb
 Vacation,routard,backpacker
-Vacation,luxuriant,luxurious object
 Various,l'instituteur,teacher
 Various,côuteux,expensive
 Cultural Activities,le dramaturge,playwright
@@ -439,3 +438,56 @@ Adjectives,méthode,methodical
 Adjectives,excès,excessive
 Adjectives,sérieux,serious
 Adjectives,suffisant,sufficient
+Animals,le chein,the dog
+Animals,le chat,the cat
+Animals,le cheval,the horse
+Animals,la vache,the cow
+Animals,la souris,the mouse
+Animals,le rat,the rat
+Animals,le lion,the lion
+Animals,l'eléphant,the elephant
+Animals,l'oiseau,the bird
+Animals,la girafe,the giraffe
+Animals,le mouton,the sheep
+Animals,le cochon,the pig
+Animals,la chévre,the goat
+Animals,le renard,the fox
+Animals,le loup,the wolf
+Animals,le poulet,the chicken
+Animals,le cerf,the deer
+Animals,le pigeon,the piegon
+Animals,la grenouille,the frog
+Animals,le poisson,the fish
+Verb,deviner,to guess
+Verb,entendre,to hear
+Verb,dépasser ,to overtake
+Verb,allumer,to turn on
+Verb,se débrouiller,to just about manage to do something
+Verb,reposer,to rest
+Verb,pousser,to push
+Verb,se débarrasser,to clear / to get rid of
+Verb,exercer,to practice
+Verb,rédiger,to write (letter or article)
+Verb,suivre,to follow
+Verb,interrompre,to interrupt
+Verb,grimper,to climb
+Verb,démontrer,to demonstrate
+Verb,trimbaler,to cart around
+Verb,accueillir,to welcome
+Verb,se soigner,to look after yourself
+Verb,se divertir,to amuse oneself
+Verb,s'amuser,to amuse oneself
+Verb,avoir besoin de,to have need of something
+Verb,réviser,to revise
+Verb,se faire des amis,to make friends
+Verb,prendre un position,to take a position
+Verb,déranger,to make untidy
+Verb,empêcher,to hinder / prevent
+Verb,revendiquer,to defend
+Verb,réunir,to reunite
+Verb,être inquiet,to be worried
+Verb,ressentir,to feel
+Verb,oser,to dare
+Verb,avoir tort,to be wrong
+Verb,teindre,to turn off
+Verb,valoir,to be worth

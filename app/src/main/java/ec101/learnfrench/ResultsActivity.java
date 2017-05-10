@@ -3,6 +3,7 @@ package ec101.learnfrench;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -28,6 +29,8 @@ public class ResultsActivity extends AppCompatActivity {
         takeTestButton.setOnClickListener(next_listener);
 
         resultsField = (TextView)findViewById(R.id.textView);
+
+        resultsField.setMovementMethod(new ScrollingMovementMethod());
 
         Intent intent = getIntent();
         QuestionsResults quizResults = intent.getParcelableExtra(QuizActivity.QUIZ_RESULTS);
