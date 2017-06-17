@@ -1,4 +1,4 @@
-package ec101.learnfrench;
+package ec101.learnfrench.Learn;
 
 import android.os.Parcelable;
 

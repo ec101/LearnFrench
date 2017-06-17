@@ -1,4 +1,8 @@
-package ec101.learnfrench;
+package ec101.learnfrench.Test;
+
+import ec101.learnfrench.Learn.Learnable;
+import ec101.learnfrench.Learn.LearnableType;
+import ec101.learnfrench.Learn.Word;
 
 /**
  * Created by Emmet on 05/04/2017.

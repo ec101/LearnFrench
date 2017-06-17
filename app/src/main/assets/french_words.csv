@@ -1,38 +1,39 @@
+Topic,French,English
 Weather,il fait beau,It's nice
 Weather,il fait chaud,It's warm
 Weather,il pleut ,It's raining
 Weather,il neige,It's snowing
 Weather,il y a du vent,It's windy
 Weather,il y a quelque nuages,There are some clouds
-Weather,La moité nord,The nothern part
-Weather,éclaircies,sunny spells
-Weather,la ciel couvert,cloudy sky
-Weather,la humidité,humidity
-Weather,le orage,storm
-Weather,le tonnerre,thunder
-Weather,la brume,mist
-Weather,le brouillard,fog
-Weather,le vent,wind
-Weather,la glace,ice
-Weather,le soleil,sun
-Weather,le éclair,lightning
+Weather,la moité nord,The nothern part
+Weather,les éclaircies,les sunny spells
+Weather,la ciel couvert,the cloudy sky
+Weather,la humidité,the humidity
+Weather,l'orage,the storm
+Weather,le tonnerre,the thunder
+Weather,la brume,the mist
+Weather,le brouillard,the fog
+Weather,le vent,the wind
+Weather,la glace,the ice
+Weather,le soleil,the sun
+Weather,l'éclair,the lightning
 Weather,il fait gris,it's grey
 Weather,il fait doux,it's soft
 Weather,il fait un temps magnifique,it's a magnificent day
 Weather,il fait 20 degres,its 20 degrees
-Weather,la canicule,heat wave
-Weather,la gel,frost
-Weather,le neige,snow
-Weather,le nuage,cloud
-Weather,l'hiver,winter
-Weather,l'été,summer
-Weather,le printemps,spring
-Weather,l'automne,autumn
-Weather,au nord,the north
-Weather,au sud,the south
-Weather,a l'est,the east
-Weather,a l'ouest,the west
-Weather,au centre,the middle
+Weather,la canicule,the heat wave
+Weather,la gel,the frost
+Weather,le neige,the snow
+Weather,le nuage,the cloud
+Weather,l'hiver,the winter
+Weather,l'été,the summer
+Weather,le printemps,the spring
+Weather,l'automne,the autumn
+Weather,au nord,in the north
+Weather,au sud,in the south
+Weather,a l'est,in the east
+Weather,a l'ouest,in the west
+Weather,au centre,the centre
 Weather,au millieu,the middle
 Weather,souffler,to blow
 Weather,briller,to shine brightly
@@ -43,8 +44,8 @@ Weather,se déplacer,to move
 Weather,commencer,to start
 Weather,neiger,to snow
 Weather,la frontier,the border
-Weather,se trouve,is found at
-Weather,se situe,is located at
+Weather,se trouve à,is found at
+Weather,se situe à,is located at
 Weather,des averses,heavy rain showers
 Housework,ranger,to tidy
 Housework,organiser,to organise
@@ -95,7 +96,7 @@ Email greeting/ending,Chèr monsieur,Dear sir
 Email greeting/ending,Bonjour monsieur,Hello sir
 Email greeting/ending,"Madame, Monsieur","Madam, Sir"
 Email greeting/ending,Bien à vous,Best to you
-Email greeting/ending,(tres) cordialement,yours cordially
+Email greeting/ending,cordialement,yours cordially
 Email greeting/ending,Sincèrement,yours sincerely
 Email greeting/ending,"Veuillez agreer, madame, monsieur, mes sincères salutations distingees",Very formal ending used for job applications
 Question words,Quel,Which
@@ -108,25 +109,25 @@ Question words,Quand,When
 Question words,Où,Where
 Household words,la cuisine,the kitchen
 Household words,la chambre,the bedroom
-Household words,la pièce,a room
-Household words,le couloir,corridor
+Household words,la pièce,the room
+Household words,le couloir,the corridor
 Household words,la salle de bains,the bathroom
 Household words,le salon,the living room
-Household words,le salle à manger,the dining room
+Household words,la salle à manger,the dining room
 Household words,le palier,the landing
 Household words,le bureau,the office
 Household words,les meubles,the furniture
-Household words,le lit,a bed
-Household words,le miroir,a mirror
-Household words,le tableaux,a picture / painting
-Household words,la armoire,a wardrobe
-Household words,la chaise,a chair
-Household words,la étagère,a shelf
-Household words,la table,a table
-Household words,le tapis,a carpet
-Household words,la fenêtre,a window
-Household words,le fauteuil,armchair
-Household words,le canapé,sofa
+Household words,le lit,the bed
+Household words,le miroir,the mirror
+Household words,le tableaux,the picture / painting
+Household words,l'armoire,the wardrobe
+Household words,la chaise,the chair
+Household words,l'étagère,the shelf
+Household words,la table,the table
+Household words,le tapis,the carpet
+Household words,la fenêtre,the window
+Household words,le fauteuil,the armchair
+Household words,le canapé,the sofa
 Household words,le coffre-fort,safe-deposit box
 Household words,les volets,the shutters
 Localisation words,à droit,to the right
@@ -154,19 +155,19 @@ Body Parts,le ventre,torso
 Body Parts,l'oreille,ear
 Body Parts,le doigt,finger
 Body Parts,le pouce,thumb
-Body Parts,l'orteil (m),toe
+Body Parts,l'orteil,toe
 Body Parts,le bras,arm
-Words indicating time,aujourd'hui,today
-Words indicating time,demain,tomorrow
-Words indicating time,hier,yesterday
-Words indicating time,maintenant,now
-Words indicating time,de nos jours,in our time
-Words indicating time,en ce moment,at the moment
-Words indicating time,dans les années (90),in the years
-Words indicating time,autrefois,another time
-Words indicating time,dans le temps,in the time
-Words indicating time,à ce moment-là,in that time
-Words indicating time,à cette epoque-là,in that epoque
+Time,aujourd'hui,today
+Time,demain,tomorrow
+Time,hier,yesterday
+Time,maintenant,now
+Time,de nos jours,in our days
+Time,en ce moment,at the moment
+Time,dans les années,in the years
+Time,autrefois,another time
+Time,dans le temps,in the time
+Time,à ce moment-là,at that time
+Time,à cette epoque-là,at that epoque
 Personal traits,fédérateur,leader
 Personal traits,les qualitiés,the qualities
 Personal traits,les défauts,the faults
@@ -219,8 +220,8 @@ Work,le boulot,the job
 Work,les congés payés,the paid vacation
 Work,le contrat de travail,the work contract
 Work,les horaires,the hours
-Work,le travail à temps partiel,part time work
-Work,l'augmentation,a raise (in pay)
+Work,le travail à temps partiel,the part time work
+Work,l'augmentation,the raise (in pay)
 Work,le salaire,the salary
 Work,le bureau,the office
 Work,l'atelier,workshop
@@ -244,31 +245,31 @@ Work,stressant,stressful
 Work,la collègue,the colleague
 Work,le bulletin de salaire,the pay slip
 Work,l'impot,tax
-Clothes,la chemise,shirt
-Clothes,le pantalon,pants/trousers
-Clothes,le manteau,coat
-Clothes,le haut,top
-Clothes,le pull,sweater
-Clothes,le short,shorts
-Clothes,la robe,dress
-Clothes,la jupe,skirt
-Clothes,l'imperméable,raincoat
-Clothes,le blouson,jacket
-Clothes,l'anorak,heavy coat
-Clothes,la veste,jacket
-Clothes,le maillot de bain,bathing suit
-Clothes,le soutien-gorge,bra
-Clothes,le costume,suit
-Clothes,le smoking,tuxedo
-Clothes,la cravate,tie
-Clothes,le noeud papillon,bow tie
-Clothes,la ceinture,belt
-Clothes,les sous vetments,underwear
-Clothes,le caleçon,boxers
-Clothes,les bottes,boots
-Clothes,les sandales,sandals
-Clothes,les chaussettes,socks
-Clothes,les chaussures,shoes
+Clothes,la chemise,the shirt
+Clothes,le pantalon,the pants/trousers
+Clothes,le manteau,the coat
+Clothes,le haut,the top
+Clothes,le pull,the sweater
+Clothes,le short,the shorts
+Clothes,la robe,the dress
+Clothes,la jupe,the skirt
+Clothes,l'imperméable,the raincoat
+Clothes,le blouson,the jacket
+Clothes,l'anorak,the heavy coat
+Clothes,la veste,the suit jacket
+Clothes,le maillot de bain,the bathing suit
+Clothes,le soutien-gorge,the bra
+Clothes,le costume,the suit
+Clothes,le smoking,the tuxedo
+Clothes,la cravate,the tie
+Clothes,le noeud papillon,the bow tie
+Clothes,la ceinture,the belt
+Clothes,les sous vetments,the underwear
+Clothes,le caleçon,the boxers
+Clothes,les bottes,the boots
+Clothes,les sandales,the sandals
+Clothes,les chaussettes,the socks
+Clothes,les chaussures,the shoes
 Clothes,le parapluie,the unbrella
 Clothes,la montre,the watch
 Clothes,l'écharpe,the scarf
@@ -277,20 +278,20 @@ Clothes,enrouler,to wrap around / to wind up
 Clothes,le gant,the glove
 Clothes,la bague,the ring
 Clothes,aider à mettre ,to help put on
-Various,témoignage,testimony
-Various,carré,square
-Various,le fait divers,small article
-Various,le chemin,the way / the path
-Various,le cafard,cockroach
-Various,le dessein ,the intention/goal
-Various,le pin,pine tree
-Various,le lame,razor balde
-Various,chagrin,sadness
-Various,le baluchon,the bindle
-Various,le fuseau horaire,the timezone
-Various,jour férié,bank holiday / public holiday
-Various,bine être,wellbeing
-Various,un domestique,a servant
+News,le témoignage,the testimony
+Various1,carré,square
+News,le fait divers,the small article
+Vacation,le chemin,the way / the path
+Animals,le cafard,cockroach
+Various1,le dessein ,the intention/goal
+Environment,le pin,pine tree
+Various1,le lame,razor balde
+Various1,chagrin,sadness
+Various1,le baluchon,the bindle
+Tiime,le fuseau horaire,the timezone
+Time,jour férié,bank holiday / public holiday
+Various1,bine être,wellbeing
+Various1,un domestique,a servant
 Idioms,avoir les patates,to be in great form
 Idioms,avoir la pêche,to be in great form
 Idioms,être lessivé,to be wrecked tired
@@ -326,71 +327,71 @@ Idioms,ca va être ta fête,you're going to get it
 Idioms,ramènes pas ta fraise,shut up
 Idioms,c'est la fin des haricots,that's the last straw
 Idioms,t'es pas une lumière,you're not the brightest
-Various,malgre,in spite of
-Various,être angoissé,to be worried
-Various,ennyeux,boring
-Various,paisible,peaceful
-Various,la soie,silk
-Various,le défi,challenge
-Various,profiter de,to make use of
-Various,forfait,fixed price
-Various,payer en plusiers fois,pay in installments
+Various1,malgre,in spite of
+Verb1,être angoissé,to be worried
+Sentiments,ennyeux,boring
+Sentiments,paisible,peaceful
+Clothes,la soie,the silk
+Various1,le défi,challenge
+Various1,profiter de,to make use of
+Various1,forfait,fixed price
+Various1,payer en plusiers fois,pay in installments
 Localisation words,en haut,on high
 Localisation words,en bas,down low
-Various,le sondage,survey / poll
-Vacation,prendre des rensigements,to search for information
+News,le sondage,the survey / poll
+Vacation,prendre des rensigements,to get information
 Vacation,faire la valise,packing
 Vacation,les habitants,the people (living in a country)
 Vacation,le parcour,journey / route
 Vacation,le périple,itinerant journey
-Vacation,des échantillons,small bottles (for make-up)
-Various,la grasse matinée,a lie in
+Vacation,l'échantillon,the small bottle / the sample
+Idioms,la grasse matinée,a lie in
 Vacation,mettre sous vide,to vacum pack
 Cultural Activities,un pièce de theatre,a play
 Cultural Activities,assister à,to attend
 Cultural Activities,le chapiteau,circus big top
-Cultural Activities,les activities culturelle,cultural activities
-Cultural Activities,les comédies musicales,musical comedies
+Cultural Activities,les activities culturelle,the cultural activities
+Cultural Activities,les comédies musicales,the musical comedies
 Cultural Activities,les comédies,comedies (theatre)
-Cultural Activities,le drame,drama play
-Cultural Activities,les tragédies,tragedies
+Cultural Activities,le drame,the drama (play)
+Cultural Activities,la tragédie,the tragedy (play)
 Cultural Activities,aller au musée,go to a museum
 Cultural Activities,aller au cinema,go to the cinema
 Cultural Activities,écouter de la musique,listen to music
 Cultural Activities,aller aux concerts,go to concerts
 Cultural Activities,aller à l'opera,go to the opera
-Cultural Activities,l'oeuvre (la),the work (of art)
+Cultural Activities,l'oeuvre,the work of art
 Cultural Activities,l'ouvreure,the usher
-Cultural Activities,la affiche,the poster
-Various,la sourire,the smile
-Various,l'ombre,the shadow
-Various,l'âme,the soul
-Various,le bouchon,the cork (wine bottle)
-Various,bande original,movie soundtrack
+Cultural Activities,l'affiche,the poster
+Various1,la sourire,the smile
+Various1,l'ombre,the shadow
+Various1,l'âme,the soul
+Various1,le bouchon,the cork (wine bottle)
+News,la bande original,the movie soundtrack
 Vacation,aôutien,person who goes on holiday in August
 Vacation,le pélerin,the pilgrim
 Vacation,juilliteste,person who goes on holiday in July
 Vacation,faire du escalade,to climb
-Vacation,routard,backpacker
-Various,l'instituteur,teacher
-Various,côuteux,expensive
-Cultural Activities,le dramaturge,playwright
-Cultural Activities,le metteur en scène,theatre director
-Cultural Activities,les comédiens,actors (theatre)
+Vacation,la routard,backpacker
+Work,l'instituteur,teacher
+Various1,côuteux,expensive
+Cultural Activities,le dramaturge,the playwright
+Cultural Activities,le metteur en scène,the theatre director
+Cultural Activities,les comédiens,the actors (theatre)
 Cultural Activities,les costumes,the costumes
 Cultural Activities,le costumier,the costume designer
-Cultural Activities,le décor,set
-Cultural Activities,le décorateur,set decorator
-Cultural Activities,la maquillage,make up
+Cultural Activities,le décor,the set
+Cultural Activities,le décorateur,the set decorator
+Cultural Activities,le maquillage,the make up
 Cultural Activities,le maquilleur,the make-up artist
 Sentiments,épuisé,exhausted
 Sentiments,honteux,ashamed
 Sentiments,effrayé,frightened
-Various,le chauffard,bad driver
-Various,la pierre,stone
-Various,le cailloux,small stone
-Various,le crôute,the crust
-Various,la violence gratuite,unnecessary violence
+Various1,le chauffard,bad driver
+Various1,la pierre,stone
+Various1,le cailloux,small stone
+Various1,le crôute,the crust
+News,la violence gratuite,unnecessary violence
 Sentiments,amoureux,loving
 Sentiments,dégoûté,disgusted
 Sentiments,ennuyé,"preoccupied, worried"
@@ -458,36 +459,104 @@ Animals,le cerf,the deer
 Animals,le pigeon,the piegon
 Animals,la grenouille,the frog
 Animals,le poisson,the fish
-Verb,deviner,to guess
-Verb,entendre,to hear
-Verb,dépasser ,to overtake
-Verb,allumer,to turn on
-Verb,se débrouiller,to just about manage to do something
-Verb,reposer,to rest
-Verb,pousser,to push
-Verb,se débarrasser,to clear / to get rid of
-Verb,exercer,to practice
-Verb,rédiger,to write (letter or article)
-Verb,suivre,to follow
-Verb,interrompre,to interrupt
-Verb,grimper,to climb
-Verb,démontrer,to demonstrate
-Verb,trimbaler,to cart around
-Verb,accueillir,to welcome
-Verb,se soigner,to look after yourself
-Verb,se divertir,to amuse oneself
-Verb,s'amuser,to amuse oneself
-Verb,avoir besoin de,to have need of something
-Verb,réviser,to revise
-Verb,se faire des amis,to make friends
-Verb,prendre un position,to take a position
-Verb,déranger,to make untidy
-Verb,empêcher,to hinder / prevent
-Verb,revendiquer,to defend
-Verb,réunir,to reunite
-Verb,être inquiet,to be worried
-Verb,ressentir,to feel
-Verb,oser,to dare
-Verb,avoir tort,to be wrong
-Verb,teindre,to turn off
-Verb,valoir,to be worth
+Verb1,deviner,to guess
+Verb1,entendre,to hear
+Verb1,dépasser ,to overtake
+Verb1,allumer,to turn on
+Verb1,se débrouiller,to just about manage to do something
+Verb1,reposer,to rest
+Verb1,pousser,to push
+Verb1,se débarrasser,to clear / to get rid of
+Verb1,exercer,to practice
+Verb1,rédiger,to write (letter or article)
+Verb1,suivre,to follow
+Verb1,interrompre,to interrupt
+Verb1,grimper,to climb
+Verb1,démontrer,to demonstrate
+Verb1,trimbaler,to cart around
+Verb1,accueillir,to welcome
+Verb1,se soigner,to look after yourself
+Verb1,se divertir,to amuse oneself
+Verb1,s'amuser,to amuse oneself
+Verb1,avoir besoin de,to have need of something
+Verb1,réviser,to revise
+Verb1,se faire des amis,to make friends
+Verb1,prendre un position,to take a position
+Verb1,déranger,to make untidy
+Verb2,empêcher,to hinder / prevent
+Verb2,revendiquer,to defend
+Verb2,réunir,to reunite
+Verb2,être inquiet,to be worried
+Verb2,ressentir,to feel
+Verb2,oser,to dare
+Verb2,avoir tort,to be wrong
+Verb2,teindre,to turn off
+Verb2,valoir,to be worth
+Sentiments,mal à l'aise,not at ease
+Verb2,cueillir,to gather
+Verb2,tremper,to soak
+Various1,oeuf à la coque,boiled egg
+Verb2,enlacer,to embrace
+Verb2,décrocher,to take down
+Verb2,chanter juste,to sing well
+Verb2,se dégonfler,to deflate
+Environment,la sur consommation,over consumption
+Environment,gaspillage,waste
+Environment,le rechauffement climatique,global warming
+Verb2,élire,to elect
+Work,apporte des résultats,will bring results
+Work,mettre en valeur,to highlight / to develop / to bring value
+Work,être reconnu,to be reconigised
+Verb2,laisser couler,to let run
+Verb2,aèrer,to air out
+Environment,lutter contre le gaspillage,the fight against waste
+Work,ferme et polie,firm and polite
+Verb2,subir,to have to put up with
+Various1,ca m'étonne que,I don't think that
+Various1,tant de,a lot of
+Verb2,faire ses besoins,to relieve oneself
+Various1,une amande,a fine
+Various2,sombre,dark
+Various2,pire,worse
+Verb2,secourir,to rescue / save
+Vacation,au millieu de nulle part,in the middle of nowhere
+Environment,la sciure de bois,sawdust
+Animals,l'éleveur,stock breeder
+Animals,l'âne,donkey
+Environment,durable,sustinable
+Consumption,pouvoir d'achat,ability to pay
+Consumption,laissés pour compte,marginailised people
+Idioms,qui me tient à coeur,that which is close to my heart
+Idioms,ca me dépasse,that's crazy
+Work,l'agence,agency / organisation
+Environment,un jardin poteger,a veg garden
+Environment,un verger,an orchard
+Environment,le compostage,the compost
+Various2,moi non plus,me neither
+Environment,l'environnement,the environment
+Household words,la chaudière,the boiler
+Environment,un puits,a well
+Household words,le plafond,the ceiling
+Household words,le toit,the roof
+Household words,le sol,the floor
+Environment,les dechets nucléaires,nuclear waste
+Household words,le stockage,the storage
+Environment,la récolte,the harvest
+Various2,le riverain,the local resident
+News,la bande-annonce,the movie trailer
+Verb2,rembourser,to reimbours
+Various2,c'est évident que,it's evident that
+Environment,tomber malade,to fall sick
+Work,singer un contrat,to sign a contract
+Verb2,infliger,to inflict or impose
+Environment,l'amende,the fine (money)
+Work,gange-pain,livelihood (bread-winner)
+Household words,le robinet,the tap
+Verb2,dépanner,to fix / help
+Work,se reconvertir,to change profession
+Environment,l'emballage,the packaging / wrapping
+Work,le bénévolat,the voluntary work
+Various2,désormais,from now on
+Various2,cependant,nevertheless
+Various2,pourtant,yet
+Environment,le dommage,the damage

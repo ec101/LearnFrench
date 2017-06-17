@@ -1,4 +1,4 @@
-package ec101.learnfrench;
+package ec101.learnfrench.ResultsActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,11 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.List;
+
+import ec101.learnfrench.R;
+import ec101.learnfrench.Test.AnsweredQuestion;
+import ec101.learnfrench.Test.QuestionsResults;
+import ec101.learnfrench.TestActivity.QuizActivity;
 
 public class ResultsActivity extends AppCompatActivity {
 

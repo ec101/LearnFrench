@@ -1,4 +1,4 @@
-package ec101.learnfrench;
+package ec101.learnfrench.Test;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -8,22 +8,25 @@ import java.util.List;
 import java.util.Random;
 import java.util.Set;
 
+import ec101.learnfrench.Learn.Learnable;
+import ec101.learnfrench.Learn.LearnableCollection;
+
 /**
  * Created by Emmet on 18/04/2017.
  */
 
-public class DefaultQuiz implements Quiz {
+public class DefaultTest implements Test {
 
-    private static final int NUMBER_OF_QUESTIONS = 20;
+    private static final int NUMBER_OF_QUESTIONS = 10;
 
-    private final Set<Learnable> allLearnableItems;
+    private final LearnableCollection learnableCollection;
     private final QuestionsResults questionResults;
     private final Iterator<Question> questionsIterator;
     private Question currentQuestion;
 
-    public DefaultQuiz(Set<Learnable> allLearnableItems){
+    public DefaultTest(LearnableCollection learnableCollection){
         super();
-        this.allLearnableItems = allLearnableItems;
+        this.learnableCollection = learnableCollection;
         Set<Learnable> itemsToLearn = generateSetOfLearnableItems();
         Set<Question> questionsToAsk = generateQuestions(itemsToLearn);
         questionResults = newQuestionResultsContainer();
@@ -31,7 +34,7 @@ public class DefaultQuiz implements Quiz {
     }
 
     private Set<Learnable> generateSetOfLearnableItems() {
-        List<Learnable> learnableItemsList = new ArrayList<>(this.allLearnableItems);
+        List<Learnable> learnableItemsList = new ArrayList<>(this.learnableCollection.getAllLearnablesItems());
         Random rnd = new Random(System.currentTimeMillis());
         Collections.shuffle(learnableItemsList, rnd);
         Set<Learnable> itemsToLearn = new HashSet<>();

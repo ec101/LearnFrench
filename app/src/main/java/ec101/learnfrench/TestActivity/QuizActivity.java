@@ -1,4 +1,4 @@
-package ec101.learnfrench;
+package ec101.learnfrench.TestActivity;
 
 import android.content.Intent;
 import android.content.res.Resources;
@@ -17,11 +17,22 @@ import java.io.InputStreamReader;
 import java.util.HashSet;
 import java.util.Set;
 
+import ec101.learnfrench.Learn.DefaultLearnableCollection;
+import ec101.learnfrench.R;
+import ec101.learnfrench.ResultsActivity.ResultsActivity;
+import ec101.learnfrench.Test.Answer;
+import ec101.learnfrench.Test.DefaultAnswer;
+import ec101.learnfrench.Test.DefaultTest;
+import ec101.learnfrench.Test.DefaultWord;
+import ec101.learnfrench.Learn.Learnable;
+import ec101.learnfrench.Test.Question;
+import ec101.learnfrench.Test.Test;
+
 public class QuizActivity extends AppCompatActivity {
 
     public static final String QUIZ_RESULTS = "ec101.learnfrench.quizResults";
 
-    private Quiz quiz;
+    private Test quiz;
     private TextView questionField;
     private EditText answerField;
     private Button nextButton;
@@ -31,15 +42,7 @@ public class QuizActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
-        Set<Learnable> allLearnableItems = null;
-        try {
-            allLearnableItems = newLearnableItems();
-        } catch (IOException e) {
-            Toast message = Toast.makeText(this, "Unable to load words from file", Toast.LENGTH_LONG);
-            message.show();
-        }
-
-        this.quiz = new DefaultQuiz(allLearnableItems);
+        this.quiz = new DefaultTest(DefaultLearnableCollection.LEARNABLES);
 
         nextButton = (Button) findViewById(R.id.button);
         View.OnClickListener next_listener = new View.OnClickListener() {
@@ -82,21 +85,5 @@ public class QuizActivity extends AppCompatActivity {
     private void saveAnswer() {
         Answer answer = new DefaultAnswer(answerField.getText().toString());
         this.quiz.setAnswer(answer);
-    }
-
-    private Set<Learnable> newLearnableItems() throws IOException {
-        Resources resources = getResources();
-        InputStream inputStream = resources.getAssets().open("french_words.csv");
-        BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
-
-        HashSet<Learnable> allLearnableItems = new HashSet<>();
-        String csvLine = reader.readLine();
-        while (csvLine != null) {
-            String[] csvLineValues = csvLine.split(",");
-            allLearnableItems.add(new DefaultWord(csvLineValues[0], csvLineValues[2], csvLineValues[1]));
-            csvLine = reader.readLine();
-        }
-        reader.close();
-        return allLearnableItems;
     }
 }

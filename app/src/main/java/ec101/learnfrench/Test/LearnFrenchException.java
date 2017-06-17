@@ -1,4 +1,4 @@
-package ec101.learnfrench;
+package ec101.learnfrench.Test;
 
 /**
  * Created by Emmet on 09/05/2017.

@@ -1,10 +1,10 @@
-package ec101.learnfrench;
+package ec101.learnfrench.Test;
 
 /**
  * Created by Emmet on 18/04/2017.
  */
 
-interface Quiz {
+public interface Test {
 
     Question getNextQuestion();
 
