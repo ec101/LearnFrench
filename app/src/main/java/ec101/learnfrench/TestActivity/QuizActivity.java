@@ -39,6 +39,7 @@ public class QuizActivity extends AppCompatActivity {
     private TextView questionField;
     private EditText answerField;
     private Button nextButton;
+    private TestConfig quizConfig;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +47,7 @@ public class QuizActivity extends AppCompatActivity {
         setContentView(R.layout.activity_quiz);
 
         Intent intent = getIntent();
-        TestConfig quizConfig = intent.getParcelableExtra(QUIZ_CONFIG);
+        quizConfig = intent.getParcelableExtra(QUIZ_CONFIG);
 
         this.quiz = new DefaultTest(DefaultLearnableCollection.LEARNABLES, quizConfig);
 
@@ -61,7 +62,7 @@ public class QuizActivity extends AppCompatActivity {
                 } else {
                     displayNextQuestion();
                     if (quiz.isFinished()) {
-                        nextButton.setText(R.string.finished);
+                        nextButton.setText(R.string.button_finished);
                     }
                 }
             }
@@ -79,6 +80,7 @@ public class QuizActivity extends AppCompatActivity {
     private void finishQuiz() {
         Intent intent = new Intent(this, ResultsActivity.class);
         intent.putExtra(QUIZ_RESULTS, quiz.getQuizResults());
+        intent.putExtra(QUIZ_CONFIG, quizConfig);
         startActivity(intent);
     }
 

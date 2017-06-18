@@ -4,9 +4,11 @@
     <string name="edit_answer">Answer</string>
     <string name="button_next">Next</string>
     <string name="button_take_test">Take Test</string>
+    <string name="button_retake_test">Re-Take Test</string>
+    <string name="button_start_again">Return to Start</string>
     <string name="results_view">Results View</string>
-    <string name="finished">Finished</string>
-    <string name="take_default_test">Take Standard Test</string>
-    <string name="take_customised_test">Take Customised Test</string>
-    <string name="view_stats">View Statistics</string>
+    <string name="button_finished">Finished</string>
+    <string name="button_take_default_test">Take Standard Test</string>
+    <string name="button_take_customised_test">Take Customised Test</string>
+    <string name="button_view_stats">View Statistics</string>
 </resources>

@@ -23,7 +23,7 @@ public class DefaultTest implements Test {
     private final Iterator<Question> questionsIterator;
     private Question currentQuestion;
 
-    public DefaultTest(LearnableCollection learnableCollection, TestConfig config){
+    public DefaultTest(LearnableCollection learnableCollection, TestConfig config) {
         super();
         this.learnableCollection = learnableCollection;
         this.config = config;
@@ -34,22 +34,34 @@ public class DefaultTest implements Test {
     }
 
     private Set<Learnable> generateSetOfLearnableItems() {
-        List<Learnable> learnableItemsList = new ArrayList<>(this.learnableCollection.getAllLearnablesItems());
+        List<Learnable> learnableItemsList = generateListOfLearnableItems();
         Random rnd = new Random(System.currentTimeMillis());
         Collections.shuffle(learnableItemsList, rnd);
         Set<Learnable> itemsToLearn = new HashSet<>();
         Iterator<Learnable> iter = learnableItemsList.iterator();
-        for(int i = 0; i < config.getTestSize(); i++){
+        for (int i = 0; i < config.getTestSize(); i++) {
             itemsToLearn.add(iter.next());
         }
         return itemsToLearn;
+    }
+
+    private List<Learnable> generateListOfLearnableItems() {
+        if (config.getSubjects() == null || config.getSubjects().length == 0) {
+            return new ArrayList<>(this.learnableCollection.getAllLearnablesItems());
+        }
+        String[] subjects = config.getSubjects();
+        ArrayList<Learnable> learnableItemsList = new ArrayList<>();
+        for(String subject : subjects){
+            learnableItemsList.addAll(this.learnableCollection.getAllLearnablesForASubject(subject));
+        }
+        return learnableItemsList;
     }
 
     private Set<Question> generateQuestions(Set<Learnable> itemsToLearn) {
         //TODO - replace implementation with stream
         QuestionBuilder questionBuilder = new DefaultQuestionBuilder();
         HashSet<Question> questions = new HashSet<>();
-        for(Learnable learnable : itemsToLearn){
+        for (Learnable learnable : itemsToLearn) {
             questions.add(questionBuilder.buildQuestion(learnable));
         }
         return questions;

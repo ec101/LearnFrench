@@ -1,5 +1,6 @@
 package ec101.learnfrench.Learn;
 
+import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -35,7 +36,7 @@ public class DefaultLearnableCollection implements LearnableCollection {
 
     @Override
     public Set<Learnable> getAllLearnablesForASubject(String subject) {
-        TreeSet<Learnable> learnables = new TreeSet<Learnable>();
+        HashSet<Learnable> learnables = new HashSet<Learnable>();
         for(Learnable learnable : allLearnableItems){
             if(learnable.getLearnableType().equals(LearnableType.WORD)){
                 Word word = (Word)learnable;

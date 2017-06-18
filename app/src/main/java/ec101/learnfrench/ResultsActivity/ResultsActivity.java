@@ -10,14 +10,18 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import ec101.learnfrench.FirstActivity.FirstActivity;
 import ec101.learnfrench.R;
 import ec101.learnfrench.Test.AnsweredQuestion;
+import ec101.learnfrench.Test.DefaultTestConfig;
 import ec101.learnfrench.Test.QuestionsResults;
+import ec101.learnfrench.Test.TestConfig;
 import ec101.learnfrench.TestActivity.QuizActivity;
 
 public class ResultsActivity extends AppCompatActivity {
 
     private TextView resultsField;
+    private TestConfig testConfig;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,10 +32,28 @@ public class ResultsActivity extends AppCompatActivity {
         View.OnClickListener next_listener = new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                takeTest();
+                takeSameTestAgain();
             }
         };
         takeTestButton.setOnClickListener(next_listener);
+
+        Button startAgainButton = (Button)findViewById(R.id.button9);
+        View.OnClickListener startAgainListener = new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                returnToBeginning();
+            }
+        };
+        startAgainButton.setOnClickListener(startAgainListener);
+
+        Button viewStatsButton = (Button)findViewById(R.id.button10);
+        View.OnClickListener viewStatsListener = new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                viewStats();
+            }
+        };
+        viewStatsButton.setOnClickListener(viewStatsListener);
 
         resultsField = (TextView)findViewById(R.id.textView);
 
@@ -39,13 +61,25 @@ public class ResultsActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         QuestionsResults quizResults = intent.getParcelableExtra(QuizActivity.QUIZ_RESULTS);
+        testConfig = intent.getParcelableExtra(QuizActivity.QUIZ_CONFIG);
 
         displayResults(quizResults);
     }
 
-    private void takeTest(){
+    private void takeSameTestAgain(){
         Intent intent = new Intent(this, QuizActivity.class);
+        intent.putExtra(QuizActivity.QUIZ_CONFIG, testConfig);
         startActivity(intent);
+    }
+
+    private void returnToBeginning(){
+        Intent intent = new Intent(this, FirstActivity.class);
+        startActivity(intent);
+    }
+
+    private void viewStats(){
+//        Intent intent = new Intent(this, QuizActivity.class);
+//        startActivity(intent);
     }
 
     private void displayResults(QuestionsResults quizResults) {
