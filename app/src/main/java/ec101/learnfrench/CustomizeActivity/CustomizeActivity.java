@@ -11,6 +11,7 @@ import android.widget.NumberPicker;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -30,8 +31,8 @@ public class CustomizeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customize);
 
-        Set<String> subjectsSet = DefaultLearnableCollection.LEARNABLES.getSubjects();
-        subjects = subjectsSet.toArray(new String[subjectsSet.size()]);
+        List<String> subjectList = DefaultLearnableCollection.LEARNABLES.getSubjects();
+        subjects = subjectList.toArray(new String[subjectList.size()]);
         selectedSubjects = new boolean[subjects.length];
 
         numberPicker = (NumberPicker) findViewById(R.id.numberPicker);

@@ -1,5 +1,6 @@
 package ec101.learnfrench.Learn;
 
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -8,7 +9,7 @@ import java.util.Set;
 
 public interface LearnableCollection {
 
-    Set<String> getSubjects();
+    List<String> getSubjects();
 
     Set<Learnable> getAllLearnablesForASubject(String subject);
 

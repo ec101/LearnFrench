@@ -14,6 +14,7 @@ import ec101.learnfrench.Learn.LearnableCollection;
 import ec101.learnfrench.Learn.LearnableItemsLoader;
 import ec101.learnfrench.R;
 import ec101.learnfrench.ResultsActivity.ResultsActivity;
+import ec101.learnfrench.StatsActivity.StatisticsActivity;
 import ec101.learnfrench.Test.DefaultTestConfig;
 import ec101.learnfrench.TestActivity.QuizActivity;
 
@@ -61,8 +62,8 @@ public class FirstActivity extends AppCompatActivity {
     }
 
     private void viewStats() {
-//        Intent intent = new Intent(this, ResultsActivity.class);
-//        startActivity(intent);
+        Intent intent = new Intent(this, StatisticsActivity.class);
+        startActivity(intent);
     }
 
     private void takeCustomisedTest() {

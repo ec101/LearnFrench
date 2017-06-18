@@ -12,6 +12,7 @@ import java.util.List;
 
 import ec101.learnfrench.FirstActivity.FirstActivity;
 import ec101.learnfrench.R;
+import ec101.learnfrench.StatsActivity.StatisticsActivity;
 import ec101.learnfrench.Test.AnsweredQuestion;
 import ec101.learnfrench.Test.DefaultTestConfig;
 import ec101.learnfrench.Test.QuestionsResults;
@@ -78,8 +79,8 @@ public class ResultsActivity extends AppCompatActivity {
     }
 
     private void viewStats(){
-//        Intent intent = new Intent(this, QuizActivity.class);
-//        startActivity(intent);
+        Intent intent = new Intent(this, StatisticsActivity.class);
+        startActivity(intent);
     }
 
     private void displayResults(QuestionsResults quizResults) {

@@ -11,4 +11,5 @@
     <string name="button_take_default_test">Take Standard Test</string>
     <string name="button_take_customised_test">Take Customised Test</string>
     <string name="button_view_stats">View Statistics</string>
+    <string name="button_reset_stats">Reset Statistics</string>
 </resources>

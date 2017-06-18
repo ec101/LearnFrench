@@ -1,6 +1,7 @@
 package ec101.learnfrench.TestActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -20,6 +21,8 @@ import java.util.Set;
 import ec101.learnfrench.Learn.DefaultLearnableCollection;
 import ec101.learnfrench.R;
 import ec101.learnfrench.ResultsActivity.ResultsActivity;
+import ec101.learnfrench.StatsActivity.DefaultStatisticsHandler;
+import ec101.learnfrench.StatsActivity.StatisticsHandler;
 import ec101.learnfrench.Test.Answer;
 import ec101.learnfrench.Test.DefaultAnswer;
 import ec101.learnfrench.Test.DefaultTest;
@@ -61,9 +64,6 @@ public class QuizActivity extends AppCompatActivity {
                     finishQuiz();
                 } else {
                     displayNextQuestion();
-                    if (quiz.isFinished()) {
-                        nextButton.setText(R.string.button_finished);
-                    }
                 }
             }
         };
@@ -78,6 +78,17 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     private void finishQuiz() {
+        updateStats();
+        moveToResultsActivity();
+    }
+
+    private void updateStats() {
+        SharedPreferences settings = getSharedPreferences(StatisticsHandler.PREFS_NAME, 0);
+        StatisticsHandler handler = new DefaultStatisticsHandler(settings);
+        handler.updateStatistics(quiz.getQuizResults());
+    }
+
+    private void moveToResultsActivity() {
         Intent intent = new Intent(this, ResultsActivity.class);
         intent.putExtra(QUIZ_RESULTS, quiz.getQuizResults());
         intent.putExtra(QUIZ_CONFIG, quizConfig);
@@ -88,6 +99,9 @@ public class QuizActivity extends AppCompatActivity {
         Question question = this.quiz.getNextQuestion();
         questionField.setText(question.getQuestionText(), TextView.BufferType.NORMAL);
         answerField.setText("", TextView.BufferType.NORMAL);
+        if (quiz.isFinished()) {
+            nextButton.setText(R.string.button_finished);
+        }
     }
 
     private void saveAnswer() {
