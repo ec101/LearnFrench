@@ -26,11 +26,14 @@ import ec101.learnfrench.Test.DefaultTest;
 import ec101.learnfrench.Test.DefaultWord;
 import ec101.learnfrench.Learn.Learnable;
 import ec101.learnfrench.Test.Question;
+import ec101.learnfrench.Test.QuestionsResults;
 import ec101.learnfrench.Test.Test;
+import ec101.learnfrench.Test.TestConfig;
 
 public class QuizActivity extends AppCompatActivity {
 
     public static final String QUIZ_RESULTS = "ec101.learnfrench.quizResults";
+    public static final String QUIZ_CONFIG = "ec101.learnfrench.quizConfig";
 
     private Test quiz;
     private TextView questionField;
@@ -42,7 +45,10 @@ public class QuizActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
-        this.quiz = new DefaultTest(DefaultLearnableCollection.LEARNABLES);
+        Intent intent = getIntent();
+        TestConfig quizConfig = intent.getParcelableExtra(QUIZ_CONFIG);
+
+        this.quiz = new DefaultTest(DefaultLearnableCollection.LEARNABLES, quizConfig);
 
         nextButton = (Button) findViewById(R.id.button);
         View.OnClickListener next_listener = new View.OnClickListener() {

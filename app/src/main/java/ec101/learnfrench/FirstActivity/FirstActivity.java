@@ -9,10 +9,12 @@ import android.widget.Toast;
 
 import java.io.IOException;
 
+import ec101.learnfrench.CustomizeActivity.CustomizeActivity;
 import ec101.learnfrench.Learn.LearnableCollection;
 import ec101.learnfrench.Learn.LearnableItemsLoader;
 import ec101.learnfrench.R;
 import ec101.learnfrench.ResultsActivity.ResultsActivity;
+import ec101.learnfrench.Test.DefaultTestConfig;
 import ec101.learnfrench.TestActivity.QuizActivity;
 
 public class FirstActivity extends AppCompatActivity {
@@ -64,12 +66,13 @@ public class FirstActivity extends AppCompatActivity {
     }
 
     private void takeCustomisedTest() {
-//        Intent intent = new Intent(this, ResultsActivity.class);
-//        startActivity(intent);
+        Intent intent = new Intent(this, CustomizeActivity.class);
+        startActivity(intent);
     }
 
     private void takeDefaultTest() {
         Intent intent = new Intent(this, QuizActivity.class);
+        intent.putExtra(QuizActivity.QUIZ_CONFIG, new DefaultTestConfig());
         startActivity(intent);
     }
 }

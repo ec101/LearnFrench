@@ -17,16 +17,16 @@ import ec101.learnfrench.Learn.LearnableCollection;
 
 public class DefaultTest implements Test {
 
-    private static final int NUMBER_OF_QUESTIONS = 10;
-
+    private final TestConfig config;
     private final LearnableCollection learnableCollection;
     private final QuestionsResults questionResults;
     private final Iterator<Question> questionsIterator;
     private Question currentQuestion;
 
-    public DefaultTest(LearnableCollection learnableCollection){
+    public DefaultTest(LearnableCollection learnableCollection, TestConfig config){
         super();
         this.learnableCollection = learnableCollection;
+        this.config = config;
         Set<Learnable> itemsToLearn = generateSetOfLearnableItems();
         Set<Question> questionsToAsk = generateQuestions(itemsToLearn);
         questionResults = newQuestionResultsContainer();
@@ -39,7 +39,7 @@ public class DefaultTest implements Test {
         Collections.shuffle(learnableItemsList, rnd);
         Set<Learnable> itemsToLearn = new HashSet<>();
         Iterator<Learnable> iter = learnableItemsList.iterator();
-        for(int i = 0; i < NUMBER_OF_QUESTIONS; i++){
+        for(int i = 0; i < config.getTestSize(); i++){
             itemsToLearn.add(iter.next());
         }
         return itemsToLearn;
